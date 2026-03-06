@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="app">
+        <div class="todo-card">
+            <div class="top">
+                <div>
+                    <p class="label">Органайзер задач</p>
+                    <h1>Smart To-Do List</h1>
+                    <p class="subtitle">Планируй, ищи, отмечай, редактируй</p>
+                </div>
+                <div class="badge" id="taskCounter">0 задач</div>
+            </div>
+
+            <div class="input-section">
+                <input type="text"
+                       id="taskInput"
+                       placeholder="Напиши новую задачу..."
+                       maxlength="100" />
+                <button id="addBtn">Добавить</button>
+            </div>
+
+            <div class="tools">
+                <input type="text" id="searchInput" placeholder="Поиск задач..." />
+
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="active">Активные</button>
+                    <button class="filter-btn" data-filter="completed">Выполненные</button>
+                </div>
+            </div>
+
+            <ul id="taskList" class="task-list"></ul>
+
+            <div class="bottom-panel">
+                <p id="statusText">Всего: 0 | Выполнено: 0 | Осталось: 0</p>
+                <button id="clearCompletedBtn" class="clear-btn">Очистить выполненные</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
